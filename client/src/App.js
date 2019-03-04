@@ -9,6 +9,8 @@ export default class App extends Component {
     super();
     this.state = {
       savedList: []
+    
+
     };
   }
 
@@ -24,6 +26,8 @@ export default class App extends Component {
      <div>
         <SavedList list={this.state.savedList} />
         <div>Replace this Div with your Routes</div>
+        <Route exact path="/" component={MovieList} />
+        <Route exact path="/movies/:id" component={Movies} />
       </div>
       </router>
     );
